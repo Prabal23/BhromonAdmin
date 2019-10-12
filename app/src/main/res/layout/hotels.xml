@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:focusableInTouchMode="true"
+    tools:context=".Vehicles">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sc"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/l1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="#fd0001"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/bhromon_logo" />
+
+                <LinearLayout
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:gravity="center"
+                        android:text="Hotels"
+                        android:textColor="#ffffff"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:gravity="center"
+                        android:text="(হোটেলসমূহ)"
+                        android:textColor="#ffffff"
+                        android:textSize="12dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/angle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/l1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-9dp"
+                android:background="@drawable/dow" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/num"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_below="@+id/angle"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/packnum"
+                    android:layout_marginLeft="0dp"
+                    android:gravity="center"
+                    android:text="0 Hotels "
+                    android:textColor="#000000"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/packnumbd"
+                    android:layout_marginLeft="0dp"
+                    android:gravity="center"
+                    android:text="(০টি হোটেল)"
+                    android:textColor="#fd0001"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/sc"
+        android:layout_marginBottom="35dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:columnWidth="90dp"
+        android:gravity="center"
+        android:horizontalSpacing="5dp"
+        android:numColumns="2"
+        android:padding="5dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/loader"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/loader_blood"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center|end"
+        android:background="#fd0001"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:text="Add Hotels"
+            android:textColor="#ffffff"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+</RelativeLayout>
